@@ -13,4 +13,23 @@
         <div class="day">Thursday</div>
     </div>
 </body>
+<script>
+    const parentClass = document.querySelector('.parent')
+    console.log("parentClass",parentClass);
+    console.log("children",parentClass.children)
+    console.log("children",parentClass.children[1])
+    for (let index = 0; index < parentClass.children.length; index++) {
+        const element = parentClass.children[index].innerHTML;
+        console.log("element",element);
+    }
+
+// console.log("first",parentClass.firstElementChild.innerHTML);
+// console.log("first",parentClass.lastElementChild.innerHTML);
+// const dayone = document.querySelector('.day')
+// console.log("dayone",dayone);
+// console.log("dayoneParent",dayone.parentElement);
+// console.log("siblingElement",dayone.nextElementSibling)
+
+console.log("NODE :", parentClass.childNodes);
+</script>
 </html>
