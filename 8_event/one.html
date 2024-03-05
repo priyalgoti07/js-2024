@@ -8,8 +8,8 @@
 </head>
 
 <body style="background-color: #414141; color: aliceblue;">
-    <div>
-        <ul>
+    <div>Amazing Images
+        <ul id="images">
             <li><img width="200px" id="photoshop"
                     src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
                     alt="photoshop"></li>
@@ -48,12 +48,20 @@
     //atleKey, ctrlKey, ShiftKey, keyCode
     //Two type if Event propagation 1) bubbling 2)capture
 
+    document.getElementById('images').addEventListener('click', function (e) {
+        console.log("Clicked inside the ul");
+
+    },false)
+
     document.getElementById('owl').addEventListener('click', function (e) {
-        console.log("e", e);
+        console.log("click owl");
+        e.stopPropagation()
+    },false)
 
-    }, false)
-
-    document.getElementById('owl').add
+    document.getElementById('goggle').addEventListener('click', function(e){
+        console.log("gogoole")
+        e.preventDefault()
+    },false)
 </script>
 
 </html>
