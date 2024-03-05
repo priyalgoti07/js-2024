@@ -48,20 +48,30 @@
     //atleKey, ctrlKey, ShiftKey, keyCode
     //Two type if Event propagation 1) bubbling 2)capture
 
-    document.getElementById('images').addEventListener('click', function (e) {
-        console.log("Clicked inside the ul");
+    // document.getElementById('images').addEventListener('click', function (e) {
+    //     console.log("Clicked inside the ul");
 
-    },false)
+    // },false)
 
-    document.getElementById('owl').addEventListener('click', function (e) {
-        console.log("click owl");
-        e.stopPropagation()
-    },false)
+    // document.getElementById('owl').addEventListener('click', function (e) {
+    //     console.log("click owl");
+    //     e.stopPropagation()
+    // },false)
 
-    document.getElementById('goggle').addEventListener('click', function(e){
-        console.log("gogoole")
-        e.preventDefault()
-    },false)
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    //     console.log("gogoole")
+    // },false)
+
+    document.querySelector('#images').addEventListener('click', function (e) {
+        console.log("e", e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            const removeimage = e.target.parentNode;
+            removeimage.remove()
+        }
+
+    })
 </script>
 
 </html>
