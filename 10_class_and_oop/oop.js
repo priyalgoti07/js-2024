@@ -18,8 +18,14 @@ function User(username, loginCount, isLoggedIn) {
     this.loginCount = loginCount;
     this.isLoggedIn = isLoggedIn
 
-    return this
+    this.greeting= function(){
+        console.log(`Welcome ${this.username}`)
+    }
+
+    // return this
 }
 
-const userdata = User("priyal",2,true)
-console.log(userdata);
+const userdata = new User("priyal", 2, true)
+const userTwo = new User("gautam", 3, true)
+console.log(userdata.constructor);
+console.log(userTwo);
